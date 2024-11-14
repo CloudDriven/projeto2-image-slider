@@ -1,0 +1,101 @@
+/*Import Google Font*/
+@import url('https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,100..900&family=Montserrat:wght@100..900&family=Playwrite+GB+S:wght@100..400&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.slider-wrapper .slider-item {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+}
+.slider-wrapper .slider-item::before {
+    position: absolute;
+    content: "";
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(../images/img-1.jpg);
+    filter: grayscale(55%);
+    background-size: cover;
+    background-position: center;
+}
+
+.slider-wrapper .slider-item:nth-child(2):before {
+    background-image: url(../images/img-2.jpg);
+}
+
+.slider-wrapper .slider-item:nth-child(3):before {
+    background-image: url(../images/img-3.jpg);
+}
+
+.slider-wrapper .slider-item:nth-child(4):before {
+    background-image: url(../images/img-4.jpg);
+}
+
+.slider-wrapper .slider-item:nth-child(5):before {
+    background-image: url(../images/img-5.jpg);
+}
+
+.slider-wrapper .slider-item .slide-content {
+    color: #fff;
+    z-index: 20;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 20px 10px;
+    max-width: 1400px;
+    position: relative;
+}
+
+.slider-wrapper .slider-item .slide-content > * {
+    max-width: 35%;
+}
+
+.slider-item .slide-content .slide-subtitle {
+    font-size: 1rem;
+    font-weight: normal;
+}
+
+.slider-item .slide-content .slide-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-top: 5px;
+    text-transform: uppercase;
+    
+}
+
+.slider-item .slide-content .slide-description {
+    margin-top: 25px;
+    line-height: 25px;
+}
+
+.slider-item .slide-content .slide-button {
+    position: relative;
+    top: 50px;
+    padding: 12px 14px;
+    font-size: 14px;
+    color: #fff;
+    background: linear-gradient(90deg, #ff7e5f, #feb47b);
+    border: none;
+    text-decoration: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.4s ease;
+}
+
+.slide-button:hover {
+    background-color: #75350b;
+    box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.15);
+}
+
+.slide-button:active {
+    transform: translateY(2px);
+    box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.2);
+}
